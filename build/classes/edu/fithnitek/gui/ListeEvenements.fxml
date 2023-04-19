@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="440.0" prefWidth="683.0" style="-fx-background-color: #0000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fithnitek.controllers.ListeEvenementsController">
+   <children>
+      <VBox accessibleRole="PAGINATION" alignment="TOP_CENTER" cacheShape="false" centerShape="false" prefHeight="440.0" prefWidth="213.0" scaleShape="false" spacing="30.0" style="-fx-background-color: #7035a1;" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="#fffbfb" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Fithnitek" />
+            <TextField fx:id="fieldLieu" prefHeight="26.0" prefWidth="205.0" promptText="Lieu" style="-fx-background-color: ffffff;" />
+            <DatePicker fx:id="fieldDate" promptText="Date" style="-fx-background-color: ffffff;" />
+            <TextField fx:id="fieldTitre" prefHeight="26.0" prefWidth="205.0" promptText="Titre" style="-fx-background-color: ffffff;" />
+            <TextField fx:id="fieldDescription" promptText="Desciption" style="-fx-background-color: ffffff;" />
+            <Button fx:id="actualierBtn" minWidth="39.0" mnemonicParsing="false" onAction="#act" prefHeight="33.0" prefWidth="109.0" style="-fx-background-color: dae1e9;" text="Actualiser Page" />
+         </children>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </padding>
+      </VBox>
+      <TableView fx:id="table_ev" layoutX="238.0" layoutY="148.0" prefHeight="230.0" prefWidth="431.0">
+        <columns>
+            <TableColumn fx:id="champId" prefWidth="21.0" text="Id" />
+          <TableColumn fx:id="champLieu" prefWidth="74.66668701171875" text="Lieu" />
+            <TableColumn fx:id="champDate" prefWidth="88.66668701171875" text="Date d'event" />
+            <TableColumn fx:id="champTitre" minWidth="0.0" prefWidth="80.3333740234375" text="Titre" />
+            <TableColumn fx:id="champDesciption" prefWidth="114.33331298828125" resizable="false" text="Description" />
+            <TableColumn fx:id="champNb" prefWidth="50.66668701171875" text="Partici." />
+        </columns>
+      </TableView>
+      <TextField fx:id="fieldChercher" layoutX="283.0" layoutY="104.0" prefHeight="31.0" prefWidth="152.0" promptText="Chercher un évenement" />
+      <Button fx:id="btnQuitter" layoutX="578.0" layoutY="387.0" minHeight="18.0" mnemonicParsing="false" onAction="#LienVersMenu" prefHeight="31.0" prefWidth="91.0" style="-fx-background-color: dae1e9;" text="Déconnecter" />
+      <Button fx:id="btnModifier" layoutX="324.0" layoutY="387.0" minWidth="42.0" mnemonicParsing="false" onAction="#modifierevent" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: dae1e9;" text="Modifier" />
+      <Button fx:id="btnAjouter" layoutX="238.0" layoutY="386.0" minWidth="39.0" mnemonicParsing="false" onAction="#ajouterEv" prefHeight="33.0" prefWidth="63.0" style="-fx-background-color: dae1e9;" text="Ajouter" />
+      <Button fx:id="btnSupp" layoutX="412.0" layoutY="386.0" minWidth="39.0" mnemonicParsing="false" onAction="#supprimerEvenement" prefHeight="33.0" prefWidth="79.0" style="-fx-background-color: dae1e9;" text="Supprimer" />
+      <Button fx:id="aaa" layoutX="505.0" layoutY="386.0" minWidth="39.0" mnemonicParsing="false" onAction="#gett" prefHeight="33.0" prefWidth="63.0" style="-fx-background-color: dae1e9;" text="Détails" />
+      <Label layoutX="364.0" layoutY="63.0" prefHeight="31.0" prefWidth="182.0" text="Listes des évènements" textAlignment="CENTER" />
+      <Button fx:id="btnListesDesSponsors" layoutX="283.0" layoutY="22.0" minWidth="39.0" mnemonicParsing="false" onAction="#LienVersListeSponsor" prefHeight="33.0" prefWidth="182.0" style="-fx-background-color: dae1e9;" text="Allez vers la liste des sponors" />
+   </children>
+</AnchorPane>

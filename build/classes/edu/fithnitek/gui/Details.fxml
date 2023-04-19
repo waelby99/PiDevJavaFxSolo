@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="710.0" style="-fx-background-color: #00000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fithnitek.controllers.DetailsController">
+   <children>
+      <TextField fx:id="Lieus" editable="false" layoutX="244.0" layoutY="55.0" />
+      <TextField fx:id="Titres" editable="false" layoutX="244.0" layoutY="93.0" />
+      <TextField fx:id="Descriptions" editable="false" layoutX="412.0" layoutY="55.0" />
+      <TextField fx:id="dates" editable="false" layoutX="64.0" layoutY="93.0" />
+      <TextField fx:id="idchamp" layoutX="64.0" layoutY="55.0" />
+      <Label layoutX="118.0" layoutY="14.0" prefHeight="35.0" prefWidth="279.0" text="Détails sur cet évènement">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table_spsr" layoutX="45.0" layoutY="148.0" prefHeight="200.0" prefWidth="529.0">
+        <columns>
+          <TableColumn fx:id="fieldID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="fieldSposnsor" prefWidth="75.0" text="Sponsor" />
+            <TableColumn fx:id="fieldMontant" prefWidth="75.0" text="Montant" />
+            <TableColumn fx:id="fieldAdresse" prefWidth="75.0" text="Adresse" />
+            <TableColumn fx:id="fieldDate" prefWidth="117.33331298828125" text="Date de Signature" />
+            <TableColumn fx:id="fieldEmail" prefWidth="110.0" text="Email" />
+        </columns>
+      </TableView>
+      <Button fx:id="ee" layoutX="45.0" layoutY="361.0" mnemonicParsing="false" onAction="#brrr" prefHeight="25.0" prefWidth="73.0" text="Quitter" />
+      <ComboBox fx:id="azert" layoutX="300.0" layoutY="361.0" prefWidth="150.0" />
+      <Button fx:id="btnaddspsr" layoutX="452.0" layoutY="361.0" mnemonicParsing="false" onAction="#addspsr" text="Ajouter un sponsor" />
+      <Label layoutX="241.0" layoutY="123.0" prefHeight="25.0" prefWidth="118.0" text="Listes des Sponsors" />
+      <ImageView fx:id="imageFrame" fitHeight="35.0" fitWidth="57.0" layoutX="504.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="nbpa" layoutX="410.0" layoutY="93.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label fx:id="labelDuree" layoutX="416.0" layoutY="23.0" prefHeight="17.0" prefWidth="150.0" />
+      <Label fx:id="montanttotal" layoutX="120.0" layoutY="365.0" prefHeight="17.0" prefWidth="179.0" />
+      <Label fx:id="temp" layoutX="50.0" layoutY="408.0" />
+      <Label fx:id="humidite" layoutX="185.0" layoutY="408.0" />
+      <Label fx:id="speed" layoutX="264.0" layoutY="408.0" />
+      <ImageView fx:id="imagetaks" fitHeight="35.0" fitWidth="47.0" layoutX="359.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
